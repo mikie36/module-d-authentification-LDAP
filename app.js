@@ -10,7 +10,7 @@ var port  	 = process.env.PORT || 80; 					// set the port
 
 app.use(express.static(__dirname + '/public')); 		// set the static files location /public/img will be /img for users
 //app.use(express.logger('dev')); 						// log every request to the console
-app.use(bodyParser.json());
+app.use(bodyParser());
 //app.use(bodyParser.urlencoded());
 app.use(cookieParser());							// pull information from html in POST
 
