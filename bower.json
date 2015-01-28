@@ -1,0 +1,36 @@
+{
+  "name": "www",
+  "version": "0.0.1",
+  "authors": [
+    "Julien Vecchioli <jvecchioli@gsx.com>"
+  ],
+  "directory": "public/vendor",
+  "description": "web front-end",
+  "license": "GSX Groupware Solutions",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "vendor"
+  ],
+  "devDependencies": {
+    "jasmine": "~2.0.4",
+    "karma": "~0.2.2",
+    "angular-mocks": "~1.3.1",
+    "assert": "~0.1.0",
+    "expect": "~0.3.1"
+  },
+  "dependencies": {
+    "angular": "~1.2.26",
+    "angular-route": "~1.2.26",
+    "angular-bootstrap": "~0.11.2",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.3.1",
+    "malihu-custom-scrollbar-plugin": "~3.0.7",
+    "socket.io-client": "~1.2.0",
+    "underscore": "~1.7.0"
+  }
+}
