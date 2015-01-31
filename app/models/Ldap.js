@@ -1,20 +1,20 @@
-var ldap = require('ldapjs');
+//var ldap = require('ldapjs');
 var Promise = require('promise');
 
 var method = Ldap.prototype;
 
 function Ldap() {
-	this.adresseAD = ""; //<--AD    ldap/192.168.1.5'// <--domino
-	this.client = ldap.createClient({
-		url: this.adresseAD
-	});
+//	this.adresseAD = ""; //<--AD    ldap/192.168.1.5'// <--domino
+//	this.client = ldap.createClient({
+//		url: this.adresseAD
+//	});
 }
 
 
 
 method.authentication = function(userName, password) {
 	var test = "null";
-	var bind = (function (client, userName, password) {
+	/*var bind = (function (client, userName, password) {
 		return new Promise(function(fulfill, reject) {
 			client.bind(userName, password, function (err) {
 				if (err) {
@@ -32,8 +32,9 @@ method.authentication = function(userName, password) {
 	});
 
 	var promise = bind(this.client, userName, password);
-	return promise;
+	return promise;*/
 
+    return true;
 	//console.log("fini").then(console.log("fini2"));
 
 	//promiseInit(this.client).then(console.lol("fini"));
