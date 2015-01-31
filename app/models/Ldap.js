@@ -4,7 +4,7 @@ var Promise = require('promise');
 var method = Ldap.prototype;
 
 function Ldap() {
-	this.adresseAD = "ldap://ent.gsx.com"; //<--AD    ldap/192.168.1.5'// <--domino
+	this.adresseAD = ""; //<--AD    ldap/192.168.1.5'// <--domino
 	this.client = ldap.createClient({
 		url: this.adresseAD
 	});
