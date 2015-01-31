@@ -1,43 +1,91 @@
-<!doctype html>
-
-<!-- ASSIGN OUR ANGULAR MODULE -->
-<html ng-app="scotchTodo">
-<head>
-	<!-- META -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
-
-	<title>Node/Angular Todo App</title>
-
-	<!-- SCROLLS -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
-	<style>
-		html 					{ overflow-y:scroll; }
-		body 					{ padding-top:50px; }
-		#todo-list 				{ margin-bottom:30px; }
-		#todo-form 	 			{ margin-bottom:50px; }
-	</style>
-
-	<!-- SPELLS -->
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
-	<script src="core.js"></script>
-
-</head>
-<!-- SET THE CONTROLLER AND GET ALL TODOS WITH INITIALIZE FUNCTION -->
-<body ng-controller="mainController">
-
-<form action="/login" method="post">
-	<div class="form-group">
-		<label>Login</label>
-		<input type="username" name="username" value="ent\gmonitor">
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Go Alban - Configurer un transfert</title>
+		<link rel="stylesheet" href="style/styles.css">
+	</head>
+	<body>
+		<!--=====================================-->
+		<!--             TOOLBAR                 -->
+		<!--=====================================-->
+		<div class="header">
+		<div class="item-wrapper" onclick="alert('information');">
+			<span>informations</span>
+		</div>
+		<div id="goalban" class="item-wrapper" >
+			<span class="orange-text">go</span>alban<span style="color:white;">pro 10Gb</span>
+			
+		</div>
+				<div  class="item-wrapper">
+			<span>recommander à un ami</span>
+			
+		</div>
 	</div>
-	<div class="form-group">
-		<label>Password</label>
-		<input type="password" name="password" value="Mon1tor">
-	</div>
+	<div class="test" id="test"></div>
+		<img  id="logo" src="img/orange_logo.png" alt="Logo Go Alban">
 
-	<button type="submit" class="btn btn-warning btn-lg">Login</button>
-</form>
+		<form action="php/form.php" method="post">
+			<div class="wrapper">
+				
+				<!--=====================================-->
+				<!--     I N P U T   F I C H I E R S     -->
+				<!--=====================================-->
+				<div id="select_fichiers" class="champ_wrapper">
+					<div class="champ">
+						Selectionner vos fichiers
+					</div>
+					<div class="container">
+						<div class="file list">
+							<div class="file line"><p>kitty.pdf</p><a class="delete file" href="#"></a></div>
+							<div class="file line"><p>poodle.pdf</p><a class="delete file" href="#"></a></div>
+							<div class="file line"><p>rabbit.pdf</p><a class="delete file" href="#"></a></div>
+						</div>
+						<div class="add file">Ajouter un fichier</div>
+					</div>
+				</div>
 
-</body>
+				<!--=================================-->
+				<!--     I N P U T   E - M A I L     -->
+				<!--=================================-->
+				<div id="emails" class="champ_wrapper">
+					<div class="champ">
+						Entrez les addresses emails
+					</div>
+					<div class="container">
+						<div class="email_list">
+							<div class="email line"><p>oli@gmail.com</p><a class="delete email" href="#"></a></div>
+							<div class="email line"><p>oli@gmail.com</p><a class="delete email" href="#"></a></div>
+							<div class="email line"><p>oli@gmail.com</p><a class="delete email" href="#"></a></div>
+						</div>
+						<input type="email" placeholder="Votre addresse email">
+						<div class="add email incorrect">Ajouter une addresse</div>
+					</div>
+				</div>
+				
+				<!--===================================-->
+				<!--     I N P U T   M E S S A G E     -->
+				<!--===================================-->
+				<div id="message" class="champ_wrapper">
+					<div class="champ">
+						Ecrivez votre message
+					</div>
+					<div class="container">
+						<textarea placeholder="Ecrivez votre message"></textarea>
+					</div>
+				</div>
+				
+				<!--=============-->
+				<!--     G O     -->
+				<!--=============-->
+				<div class="btn_go">
+					<input type="submit" value="go"/>
+				</div>
+			
+			</div><!-- W R A P P E R -->
+		</form>
+	</body>
+		<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"></script>
+		<script src="libs/jquery-1.11.2.min.js"></script>
+		<script type="libs/angular.min.js"></script>
+		<script src="scripts.js"></script>
 </html>
