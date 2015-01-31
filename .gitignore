@@ -1,3 +1,4 @@
+/public/vendor/*
 # Logs
 logs
 *.log
